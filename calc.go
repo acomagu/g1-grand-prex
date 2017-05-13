@@ -2,7 +2,6 @@ package main
 
 import (
 	"math/rand"
-	"fmt"
 	"time"
 )
 
@@ -25,7 +24,6 @@ func calcNextPlacing(field Field) (int, int, error) {
 		return p.y, p.x, nil
 	}
 
-	fmt.Println("RAND")
 	for {
 		y := rand.Intn(l)
 		x := rand.Intn(l)
@@ -39,12 +37,6 @@ func calcNextPlacing(field Field) (int, int, error) {
 
 func getDangerPoint(field Field, n int, color State, depth int) (Point) {
 	points := getNextPositions(field, color)
-
-	// debugField := field.copy()
-	// for _, p := range points {
-	// 	debugField[p.y][p.x] = Me
-	// }
-	// printField(debugField)
 
 	for _, p := range points {
 		tmpField := field.copy()
