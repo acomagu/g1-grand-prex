@@ -13,7 +13,7 @@ The client always outputs one placing after the other's inputs. If the client mu
 ## Usage
 
 ```bash
-$ go run main.go
+$ go build && ./g1-grand-prix
 ```
 
 This will wait input from STDIN.
